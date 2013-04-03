@@ -42,7 +42,7 @@
                 android:orientation="vertical" >
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/bPhone"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -78,33 +78,33 @@
                     android:layout_margin="10dp" >
 
                     <ImageButton
-                        android:id="@+id/ImageButton03"
+                        android:id="@+id/bPhone"
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="70dp"
                         android:layout_weight="1"
                         android:onClick="onPhone"
                         android:src="@drawable/ic_launcher_phone" />
 
                     <ImageButton
-                        android:id="@+id/ImageButton02"
+                        android:id="@+id/bContacts"
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="70dp"
                         android:layout_weight="1"
                         android:onClick="onContacts"
                         android:src="@drawable/ic_launcher_contacts" />
 
                     <ImageButton
-                        android:id="@+id/ImageButton01"
+                        android:id="@+id/bBrowser"
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="70dp"
                         android:layout_weight="1"
                         android:onClick="onBrowser"
                         android:src="@drawable/ic_launcher_browser" />
 
                     <ImageButton
-                        android:id="@+id/imageButton1"
+                        android:id="@+id/bCalendar"
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="70dp"
                         android:layout_weight="1"
                         android:onClick="onCalendar"
                         android:src="@drawable/ic_launcher_calendar" />
@@ -126,10 +126,59 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:gravity="center"
-                    android:text="Internet"
+                    android:text="Google Apps"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#F0F0F0"
                     android:textSize="30sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/ImageButton05"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:onClick="onCurrents"
+                            android:src="@drawable/ic_launcher_currents" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton02"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:onClick="onKeep"
+                            android:src="@drawable/ic_launcher_keep" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton03"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:onClick="onMaps"
+                            android:src="@drawable/ic_launcher_maps" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton01"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:onClick="onDrive"
+                            android:src="@drawable/ic_launcher_drive" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton04"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:onClick="onCurrents"
+                            android:src="@drawable/ic_launcher_currents" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
 
             </LinearLayout>
 

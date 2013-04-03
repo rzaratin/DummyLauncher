@@ -25,26 +25,34 @@ public final class R {
         public static final int ic_launcher_browser=0x7f020001;
         public static final int ic_launcher_calendar=0x7f020002;
         public static final int ic_launcher_contacts=0x7f020003;
-        public static final int ic_launcher_phone=0x7f020004;
+        public static final int ic_launcher_currents=0x7f020004;
+        public static final int ic_launcher_drive=0x7f020005;
+        public static final int ic_launcher_keep=0x7f020006;
+        public static final int ic_launcher_maps=0x7f020007;
+        public static final int ic_launcher_phone=0x7f020008;
     }
     public static final class id {
-        public static final int ImageButton01=0x7f080006;
-        public static final int ImageButton02=0x7f080005;
-        public static final int ImageButton03=0x7f080004;
-        public static final int action_settings=0x7f080009;
-        public static final int button1=0x7f080002;
-        public static final int imageButton1=0x7f080007;
+        public static final int ImageButton01=0x7f08000c;
+        public static final int ImageButton02=0x7f08000a;
+        public static final int ImageButton03=0x7f08000b;
+        public static final int ImageButton04=0x7f08000d;
+        public static final int ImageButton05=0x7f080009;
+        public static final int action_settings=0x7f08000e;
+        public static final int bBrowser=0x7f080005;
+        public static final int bCalendar=0x7f080006;
+        public static final int bContacts=0x7f080004;
+        public static final int bPhone=0x7f080002;
+        public static final int horizontalScrollView1=0x7f080008;
         public static final int scrollView1=0x7f080000;
         public static final int textView1=0x7f080001;
         public static final int textView2=0x7f080003;
-        public static final int textView3=0x7f080008;
+        public static final int textView3=0x7f080007;
     }
     public static final class layout {
         public static final int activity_launcher=0x7f030000;
     }
     public static final class menu {
-        public static final int aplication_adapter=0x7f070000;
-        public static final int launcher=0x7f070001;
+        public static final int launcher=0x7f070000;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
