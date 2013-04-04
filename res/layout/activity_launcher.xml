@@ -42,7 +42,7 @@
                 android:orientation="vertical" >
 
                 <Button
-                    android:id="@+id/bPhone"
+                    android:id="@+id/bApps"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -78,7 +78,7 @@
                     android:layout_margin="10dp" >
 
                     <ImageButton
-                        android:id="@+id/bPhone"
+                        android:id="@+id/bApps"
                         android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
@@ -180,6 +180,24 @@
 
                 </HorizontalScrollView>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FF8800"
+                android:orientation="vertical" >
+                
+                <Button
+                    android:id="@+id/bApps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onClick="onApps"
+                    android:text="All your Apps"
+                    android:textColor="#F0F0F0"
+                    android:textSize="20sp" />
             </LinearLayout>
 
         </LinearLayout>

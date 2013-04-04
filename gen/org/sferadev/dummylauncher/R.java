@@ -37,11 +37,16 @@ public final class R {
         public static final int ImageButton03=0x7f08000b;
         public static final int ImageButton04=0x7f08000d;
         public static final int ImageButton05=0x7f080009;
-        public static final int action_settings=0x7f08000e;
+        public static final int action_settings=0x7f080013;
+        public static final int applauncher_linearlayout=0x7f08000e;
+        public static final int applauncherrow_appname=0x7f080012;
+        public static final int applauncherrow_icon=0x7f080010;
+        public static final int applauncherrow_imagelinearlayout=0x7f08000f;
+        public static final int applauncherrow_namelinearlayout=0x7f080011;
+        public static final int bApps=0x7f080002;
         public static final int bBrowser=0x7f080005;
         public static final int bCalendar=0x7f080006;
         public static final int bContacts=0x7f080004;
-        public static final int bPhone=0x7f080002;
         public static final int horizontalScrollView1=0x7f080008;
         public static final int scrollView1=0x7f080000;
         public static final int textView1=0x7f080001;
@@ -50,6 +55,8 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_launcher=0x7f030000;
+        public static final int applauncher=0x7f030001;
+        public static final int applauncherrow=0x7f030002;
     }
     public static final class menu {
         public static final int launcher=0x7f070000;
@@ -58,7 +65,6 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
-        public static final int title_activity_aplication_adapter=0x7f050003;
     }
     public static final class style {
         /** 
