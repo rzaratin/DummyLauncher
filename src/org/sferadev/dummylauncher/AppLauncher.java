@@ -107,41 +107,11 @@ public class AppLauncher extends ListActivity{
  
 		private List<ResolveInfo> createActivityList(){
 			List<ResolveInfo> aList = packMan.queryIntentActivities(mainIntent, 0);
- 
+			
 			Collections.sort(aList, 
 					new ResolveInfo.DisplayNameComparator(packMan)); 
  
 			return aList;
-		}
- 
-		private void packageDebug(){
-			if(null == packageList){
-				return;
-			}
- 
-			for(int i = 0; i < packageList.size(); ++i){
-				Log.v("PACKINFO: ", "\t" + 
-						packageList.get(i).appName + "\t" + 
-						packageList.get(i).packageName + "\t" + 
-						packageList.get(i).className + "\t" +
-						packageList.get(i).versionName + "\t" + 
-						packageList.get(i).versionCode);
-			}
-		}
- 
-		private void activityDebug(){
-			if(null == activityList){
-				return;
-			}
- 
-			for(int i = 0; i < activityList.size(); i++){ 
-				ActivityInfo currentActivity = activityList.get(
-						i).activityInfo;
-				Log.v("ACTINFO", 
-						"pName=" 
-						+ currentActivity.applicationInfo.packageName +
-						" cName=" + currentActivity.name);
-			}
 		}
  
 		private void addClassNamesToPackageList(){
