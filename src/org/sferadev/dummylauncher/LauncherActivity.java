@@ -71,7 +71,7 @@ public class LauncherActivity extends Activity {
     	}
     
     public void onGoogle(View v){
-    	/*if(isAppInstalled("com.google.android.googlequicksearchbox")){
+    	if(isAppInstalled("com.google.android.googlequicksearchbox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
@@ -88,16 +88,11 @@ public class LauncherActivity extends Activity {
     		String url = "https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
-            startActivity(i);*/
-    	Intent localIntent2 = new Intent("android.intent.action.PICK_ACTIVITY");
-		Intent localIntent3 = new Intent("android.intent.action.MAIN",null);
-		localIntent3.addCategory("android.intent.category.LAUNCHER");   
-		localIntent2.putExtra("android.intent.extra.INTENT",localIntent3);
-		startActivityForResult(localIntent2, 1);
+            startActivity(i);
 		
     	}
     		    	
-   // }
+    }
 
     public void onCalendar(View v){
     	if(isAppInstalled("com.google.android.calendar")){

@@ -24,6 +24,29 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
  
+/*Under development
+	1st Try
+	IntentFilter filter = new IntentFilter();
+		filter.addAction("android.intent.action.MAIN");
+		filter.addCategory("android.intent.category.HOME");
+		filter.addCategory("android.intent.category.DEFAULT");
+	
+	2nd Try
+	Intent localIntent2 = new Intent("android.intent.action.PICK_ACTIVITY");
+    	Intent localIntent3 = new Intent("android.intent.action.MAIN",null);
+    	localIntent3.addCategory("android.intent.category.LAUNCHER");   
+    	localIntent2.putExtra("android.intent.extra.INTENT", localIntent3);
+    	startActivityForResult(localIntent2, 0);
+    	
+    3rd Try
+    Intent intent = new Intent(Intent.ACTION_MAIN, null);
+    	intent.addCategory(Intent.CATEGORY_LAUNCHER);
+    	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    	startActivity(intent);
+    	
+    	
+ */
+
 public class AppLauncher extends ListActivity{
 	ApplicationAdapter appAdapter = null;
 	ProgressDialog progressDialog = null; 
