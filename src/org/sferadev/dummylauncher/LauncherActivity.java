@@ -75,7 +75,7 @@ public class LauncherActivity extends Activity {
     	}
     
     public void onGoogle(View v){
-    	/*if(isAppInstalled("com.google.android.googlequicksearchbox")){
+    	if(isAppInstalled("com.google.android.googlequicksearchbox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
@@ -94,7 +94,7 @@ public class LauncherActivity extends Activity {
             i.setData(Uri.parse(url));
             startActivity(i);
 		
-    	}*/ 	
+    	}	
     }
 
     public void onCalendar(View v){
