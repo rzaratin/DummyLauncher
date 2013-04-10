@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/applauncherrow_imagelinearlayout"
-	android:layout_width="match_parent"
-	android:layout_height="?android:attr/listPreferredItemHeight"
-	android:padding="6dip">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#CC0000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/applauncherrow_imagelinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_margin="10dp"
+        android:background="#FF8800"
+        android:padding="6dip" >
  
 	<ImageView
 	    android:id="@+id/applauncherrow_icon"
 	    android:layout_width="60dp"
-	    android:layout_height="70dp"
+	    android:layout_height="fill_parent"
 	    android:layout_marginRight="6dip" />
  
     <LinearLayout
@@ -26,8 +33,10 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:textColor="#F0F0F0"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
  
     </LinearLayout>
  
+</LinearLayout>
+    
 </LinearLayout>

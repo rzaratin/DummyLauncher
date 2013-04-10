@@ -1,5 +1,7 @@
 package org.sferadev.dummylauncher;
 
+import java.util.List;
+
 import org.sferadev.dummylauncher.AppLauncher.*;
 
 import android.net.Uri;
@@ -9,6 +11,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -21,6 +24,7 @@ public class LauncherActivity extends Activity {
 	ImageButton bBrowser;
 	ImageButton bCalendar;
 	Runnable runme = null;
+	PackageManager pm;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +75,7 @@ public class LauncherActivity extends Activity {
     	}
     
     public void onGoogle(View v){
-    	if(isAppInstalled("com.google.android.googlequicksearchbox")){
+    	/*if(isAppInstalled("com.google.android.googlequicksearchbox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
@@ -90,8 +94,7 @@ public class LauncherActivity extends Activity {
             i.setData(Uri.parse(url));
             startActivity(i);
 		
-    	}
-    		    	
+    	}*/ 	
     }
 
     public void onCalendar(View v){

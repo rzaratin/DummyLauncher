@@ -9,20 +9,26 @@ import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
  
 /*Under development
 	1st Try
@@ -44,6 +50,12 @@ import android.widget.TextView;
     	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     	startActivity(intent);
     	
+    4th Try
+    final Intent i = new Intent("android.intent.action.MAIN");
+		i.addCategory("android.intent.category.LAUNCHER");
+
+		final List<ResolveInfo> appList = pm.queryIntentActivities(i, 0);
+    	
     	
  */
 
@@ -53,10 +65,12 @@ public class AppLauncher extends ListActivity{
 	static Runnable viewApps = null;
 	ArrayList<AppInfo> packageList = null;
 	Applications myApps = null;
+	
+	ProgressBar cycle;
  
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
- 
+		
 		this.setContentView(R.layout.applauncher);
  
 		packageList = new ArrayList<AppInfo>();
@@ -78,15 +92,23 @@ public class AppLauncher extends ListActivity{
 		//progressDialog = ProgressDialog.show(AppLauncher.this, 
 				//"Hold on...", "Loading your apps...", true);
 	}
+	
+	@Override
+	public void onBackPressed() {
+     	Intent intent = new Intent(this, LauncherActivity.class);
+	        this.startActivity(intent);
+
+	}
  
 	public class Applications{
 		private ArrayList<AppInfo> packageList = null;
 		private List<ResolveInfo> activityList = null;
-		private Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+		
 		private PackageManager packMan = null;
  
 		public Applications(PackageManager packManager){
 			packMan = packManager;
+			
 			packageList = this.createPackageList(false);
 			activityList = this.createActivityList();
 			this.addClassNamesToPackageList();
@@ -104,7 +126,7 @@ public class AppLauncher extends ListActivity{
 			ArrayList<AppInfo> pList = new ArrayList<AppInfo>();        
  
 		    List<PackageInfo> packs = getPackageManager(
-		    		).getInstalledPackages(0);
+		    		).getInstalledPackages(PackageManager.GET_ACTIVITIES);
  
 		    for(int i = 0; i < packs.size(); i++){
 		        PackageInfo packInfo = packs.get(i);
@@ -129,12 +151,14 @@ public class AppLauncher extends ListActivity{
 		}
  
 		private List<ResolveInfo> createActivityList(){
+			Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
 			List<ResolveInfo> aList = packMan.queryIntentActivities(mainIntent, 0);
 			
 			Collections.sort(aList, 
 					new ResolveInfo.DisplayNameComparator(packMan)); 
- 
+			
 			return aList;
+			
 		}
  
 		private void addClassNamesToPackageList(){
@@ -250,8 +274,13 @@ public class AppLauncher extends ListActivity{
 					appAdapter.add(packageList.get(i));
 				}
 			}
+			
+			cycle = (ProgressBar) findViewById(R.id.cycle);
+    		cycle.setVisibility(View.GONE);
+			
 			//progressDialog.dismiss();
 			appAdapter.notifyDataSetChanged();
+
 		}
 	};
  
@@ -263,7 +292,9 @@ public class AppLauncher extends ListActivity{
 		AppInfo rowClicked = (AppInfo)this.getListAdapter().getItem(
 				position);
  
-		Intent startApp = new Intent();
+		try {
+			Intent startApp = new Intent();
+		
 		ComponentName component = new ComponentName(
 				rowClicked.getPackageName(), 
 				rowClicked.getClassName());
@@ -271,5 +302,15 @@ public class AppLauncher extends ListActivity{
 		startApp.setAction(Intent.ACTION_MAIN);
  
 		startActivity(startApp);
+		}
+		catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    		}
 	}
+	
+	
 }
