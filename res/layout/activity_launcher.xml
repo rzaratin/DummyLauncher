@@ -93,13 +93,12 @@
                         android:onClick="onContacts"
                         android:src="@drawable/ic_launcher_contacts" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bBrowser"
                         android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
-                        android:onClick="onBrowser"
-                        android:src="@drawable/ic_launcher_browser" />
+                        android:onClick="onBrowser" />
 
                     <ImageButton
                         android:id="@+id/bCalendar"

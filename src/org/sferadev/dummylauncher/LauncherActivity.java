@@ -11,7 +11,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -21,28 +23,26 @@ import android.widget.Toast;
 
 public class LauncherActivity extends Activity {
 	
-	ImageButton bBrowser;
+	Button bBrowser;
 	ImageButton bCalendar;
 	Runnable runme = null;
 	PackageManager pm;
+	Drawable icon;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
         
-        runme = new Runnable(){
-			public void run(){
-				AppLauncher myActivity = new AppLauncher();
-		        myActivity.getApps();
-			}
-		};
+        bBrowser = (Button) findViewById(R.id.bBrowser);		        
+        
+       getIcons();
+        
         
         if(isAppInstalled("com.google.android.googlequicksearchbox")){
         	
         }
         else {
-        	bBrowser = (ImageButton) findViewById(R.id.bBrowser);
     		bBrowser.setVisibility(View.GONE);
     		
         }
@@ -55,6 +55,22 @@ public class LauncherActivity extends Activity {
         }
     }
     
+   // Try to get icons from pm... 
+    
+    public void getIcons(){
+    	try{
+    		Drawable icon = getBaseContext().getPackageManager().getApplicationIcon("com.android.browser");
+    		bBrowser.setCompoundDrawables(icon, icon, icon, icon);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    			Context context = getApplicationContext();
+        		CharSequence text = "Unable to launch this App";
+        		int duration = Toast.LENGTH_SHORT;
+        		Toast toast = Toast.makeText(context, text, duration);
+        		toast.show();
+    		 }
+    }
     
     public void onApps(View v){
     	Intent intent = new Intent(this, AppLauncher.class);
@@ -75,7 +91,8 @@ public class LauncherActivity extends Activity {
     	}
     
     public void onGoogle(View v){
-    	if(isAppInstalled("com.google.android.googlequicksearchbox")){
+    	try{
+    		if(isAppInstalled("com.google.android.googlequicksearchbox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
@@ -93,12 +110,20 @@ public class LauncherActivity extends Activity {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
-		
-    	}	
+    	}
+    	}
+    		catch (Exception e) {
+    			Context context = getApplicationContext();
+        		CharSequence text = "Unable to launch this App";
+        		int duration = Toast.LENGTH_SHORT;
+        		Toast toast = Toast.makeText(context, text, duration);
+        		toast.show();
+        		}
     }
 
     public void onCalendar(View v){
-    	if(isAppInstalled("com.google.android.calendar")){
+    	try{
+    		if(isAppInstalled("com.google.android.calendar")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.android.chrome");
@@ -112,10 +137,19 @@ public class LauncherActivity extends Activity {
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);	
     	}
+    	}
+    	catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    	}
 	}
     
 	public void onBrowser(View v){
-		if(isAppInstalled("com.android.chrome")){
+		try{ 
+			if(isAppInstalled("com.android.chrome")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.android.chrome");
@@ -129,24 +163,51 @@ public class LauncherActivity extends Activity {
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);
     	}
+		}
+		catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    		}
 	}
 
 	public void onContacts(View v){
-		Intent i = new Intent(Intent.ACTION_MAIN);
-		i.setComponent(new ComponentName("com.android.contacts","com.android.contacts.activities.PeopleActivity"));
-		startActivity(i);
+		try {
+			Intent i = new Intent(Intent.ACTION_MAIN);
+			i.setComponent(new ComponentName("com.android.contacts","com.android.contacts.activities.PeopleActivity"));
+			startActivity(i);
+		}
+		catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    		}
 	}
 
 	public void onPhone(View v){
-		Intent i = new Intent();
+		try {
+			Intent i = new Intent();
 		PackageManager manager = getPackageManager();
 		i = manager.getLaunchIntentForPackage("com.android.contacts");
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);
+		}
+		catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    		}
 	}
 	
 	public void onMail(View v){
-		if(isAppInstalled("com.google.android.gm")){
+		try {
+			if(isAppInstalled("com.google.android.gm")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage("com.google.android.gm");
@@ -160,6 +221,14 @@ public class LauncherActivity extends Activity {
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);
     	}
+		}
+		catch (Exception e) {
+			Context context = getApplicationContext();
+    		CharSequence text = "Unable to launch this App";
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, text, duration);
+    		toast.show();
+    		}
 	}
 	
 	public void onKeep(View v){
@@ -241,7 +310,7 @@ public class LauncherActivity extends Activity {
     		}
     	else{
     		Context context = getApplicationContext();
-    		CharSequence text = "Google Drive not installed";
+    		CharSequence text = "Google Currents not installed";
     		int duration = Toast.LENGTH_LONG;
     		Toast toast = Toast.makeText(context, text, duration);
     		toast.show();

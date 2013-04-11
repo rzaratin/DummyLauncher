@@ -21,38 +21,44 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int ic_launcher_browser=0x7f020001;
-        public static final int ic_launcher_calendar=0x7f020002;
-        public static final int ic_launcher_contacts=0x7f020003;
-        public static final int ic_launcher_currents=0x7f020004;
-        public static final int ic_launcher_drive=0x7f020005;
-        public static final int ic_launcher_keep=0x7f020006;
-        public static final int ic_launcher_maps=0x7f020007;
-        public static final int ic_launcher_phone=0x7f020008;
+        public static final int github=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int ic_launcher_browser=0x7f020002;
+        public static final int ic_launcher_calendar=0x7f020003;
+        public static final int ic_launcher_contacts=0x7f020004;
+        public static final int ic_launcher_currents=0x7f020005;
+        public static final int ic_launcher_drive=0x7f020006;
+        public static final int ic_launcher_keep=0x7f020007;
+        public static final int ic_launcher_maps=0x7f020008;
+        public static final int ic_launcher_phone=0x7f020009;
+        public static final int paypal=0x7f02000a;
+        public static final int xda=0x7f02000b;
     }
     public static final class id {
-        public static final int ImageButton01=0x7f08000c;
-        public static final int ImageButton02=0x7f08000a;
-        public static final int ImageButton03=0x7f08000b;
-        public static final int ImageButton04=0x7f08000d;
-        public static final int ImageButton05=0x7f080009;
-        public static final int action_settings=0x7f080014;
-        public static final int applauncher_linearlayout=0x7f08000e;
-        public static final int applauncherrow_appname=0x7f080013;
-        public static final int applauncherrow_icon=0x7f080011;
-        public static final int applauncherrow_imagelinearlayout=0x7f080010;
-        public static final int applauncherrow_namelinearlayout=0x7f080012;
-        public static final int bApps=0x7f080002;
-        public static final int bBrowser=0x7f080005;
-        public static final int bCalendar=0x7f080006;
-        public static final int bContacts=0x7f080004;
-        public static final int cycle=0x7f08000f;
-        public static final int horizontalScrollView1=0x7f080008;
+        public static final int ImageButton01=0x7f08000f;
+        public static final int ImageButton02=0x7f08000d;
+        public static final int ImageButton03=0x7f08000e;
+        public static final int ImageButton04=0x7f080010;
+        public static final int ImageButton05=0x7f08000c;
+        public static final int action_settings=0x7f080017;
+        public static final int applauncher_linearlayout=0x7f080011;
+        public static final int applauncherrow_appname=0x7f080016;
+        public static final int applauncherrow_icon=0x7f080014;
+        public static final int applauncherrow_imagelinearlayout=0x7f080013;
+        public static final int applauncherrow_namelinearlayout=0x7f080015;
+        public static final int bApps=0x7f080007;
+        public static final int bBrowser=0x7f080009;
+        public static final int bCalendar=0x7f08000a;
+        public static final int bContacts=0x7f080008;
+        public static final int button_github=0x7f080004;
+        public static final int button_paypal=0x7f080005;
+        public static final int button_xda=0x7f080003;
+        public static final int cycle=0x7f080012;
+        public static final int horizontalScrollView1=0x7f08000b;
         public static final int scrollView1=0x7f080000;
         public static final int textView1=0x7f080001;
-        public static final int textView2=0x7f080003;
-        public static final int textView3=0x7f080007;
+        public static final int textView2=0x7f080002;
+        public static final int textView3=0x7f080006;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
@@ -65,8 +71,15 @@ public final class R {
         public static final int launcher=0x7f070001;
     }
     public static final class string {
+        public static final int about=0x7f050004;
+        public static final int about_donations=0x7f05000a;
+        public static final int about_text=0x7f050006;
+        public static final int about_title=0x7f050005;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int button_github=0x7f050008;
+        public static final int button_paypal=0x7f050009;
+        public static final int button_xda=0x7f050007;
         public static final int hello_world=0x7f050002;
         public static final int title_activity_about=0x7f050003;
     }
