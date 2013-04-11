@@ -4,5 +4,15 @@
     <string name="app_name">Dummy Launcher</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_about">Dummy Launcher</string>
 
+    <string name="about">About</string>
+    <string name="about_title">About Dummy Launcher</string>
+    <string name="about_text">Dev Version</string>
+    
+    <string name="button_xda">Dummy Launcher at XDA</string>
+    <string name="button_github">OpenSource at GitHub</string>
+    <string name="button_paypal">Support the project by PayPal</string>
+    <string name="about_donations">PayPal donations do not grant any updates or improvements, they just support the work of the developer. App will remain free without donating.</string>
+    
 </resources>
