@@ -11,7 +11,7 @@ public class onPaypal extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-	        String url = "";
+	        String url = "http://forum.xda-developers.com/donatetome.php?u=4710474";
 	        Intent i = new Intent(Intent.ACTION_VIEW);
 	        i.setData(Uri.parse(url));
 	        startActivity(i);

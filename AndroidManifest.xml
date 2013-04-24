@@ -47,6 +47,9 @@
                 <action android:name="android.intent.action.LAUNCHER" />
 			</intent-filter>
         </activity>
+        <activity android:name="onXDA"></activity>
+        <activity android:name="onGithub"></activity>
+        <activity android:name="onPaypal"></activity>
     </application>
 
 </manifest>

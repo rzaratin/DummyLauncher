@@ -11,7 +11,7 @@ public class onGithub extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-	        String url = "";
+	        String url = "https://github.com/SferaDev/DummyLauncher/";
 	        Intent i = new Intent(Intent.ACTION_VIEW);
 	        i.setData(Uri.parse(url));
 	        startActivity(i);
