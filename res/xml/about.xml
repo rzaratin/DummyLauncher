@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Title">
+    
+    <PreferenceCategory
+            android:title="XDA"/>
+    	<Preference
+    	    android:title="Dummy Launcher at XDA"
+    	    android:summary="Give Feedback and report bugs at the official topic">
+    	    
+    	    <intent
+				android:action="android.intent.action.VIEW"
+				android:targetPackage="org.sferadev.dummylauncher"
+				android:targetClass="org.sferadev.dummylauncher.xda" />
+     	</Preference>
+    
+    
+    <PreferenceCategory
+            android:title="Github"/>
+    <Preference
+    	    android:title="Open Source at Github"
+    	    android:summary="You can code a new feature or translate the app">
+    	    
+    	    <intent
+				android:action="android.intent.action.VIEW"
+				android:targetPackage="org.sferadev.dummylauncher"
+				android:targetClass="org.sferadev.dummylauncher.github" />
+     	</Preference>
+    
+    <PreferenceCategory
+            android:title="Paypal"/>
+    <Preference
+    	    android:title="Donations via Paypal"
+    	    android:summary="PayPal donations do not grant any updates or improvements, they just support the work of the developer. App will remain free without donating.">
+    	    
+    	    <intent
+				android:action="android.intent.action.VIEW"
+				android:targetPackage="org.sferadev.dummylauncher"
+				android:targetClass="org.sferadev.dummylauncher.paypal" />
+   </Preference>
+   </PreferenceScreen>

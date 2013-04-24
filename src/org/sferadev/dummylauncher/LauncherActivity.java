@@ -11,64 +11,118 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class LauncherActivity extends Activity {
 	
-	Button bBrowser;
-	ImageButton bCalendar;
 	Runnable runme = null;
 	PackageManager pm;
-	Drawable icon;
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
         
-        bBrowser = (Button) findViewById(R.id.bBrowser);		        
-        
-       getIcons();
+        getIcons();
         
         
+        /* Hide new items if they are not installed
         if(isAppInstalled("com.google.android.googlequicksearchbox")){
         	
         }
         else {
-    		bBrowser.setVisibility(View.GONE);
     		
         }
-        
-        if(isAppInstalled("com.google.android.googlequicksearchb")){
-        	
-        }
-        else {
-        	
-        }
+        */
     }
-    
-   // Try to get icons from pm... 
     
     public void getIcons(){
     	try{
-    		Drawable icon = getBaseContext().getPackageManager().getApplicationIcon("com.android.browser");
-    		bBrowser.setCompoundDrawables(icon, icon, icon, icon);
+    		Drawable iBrowser;
+    		iBrowser = getBaseContext().getPackageManager().getApplicationIcon("com.android.browser");    		
+    		ImageButton bBrowser;
+    		bBrowser = (ImageButton) findViewById(R.id.bBrowser);
+    		bBrowser.setImageDrawable(iBrowser);
+		}
+		catch (PackageManager.NameNotFoundException ne)
+			{
+	
+			}
+		
+    	try{
+    		Drawable iCalendar;
+    		iCalendar = getBaseContext().getPackageManager().getApplicationIcon("com.android.calendar");    		
+    		ImageButton bCalendar;
+    		bCalendar = (ImageButton) findViewById(R.id.bCalendar);
+    		bCalendar.setImageDrawable(iCalendar);
     		}
     		catch (PackageManager.NameNotFoundException ne)
     		 {
-    			Context context = getApplicationContext();
-        		CharSequence text = "Unable to launch this App";
-        		int duration = Toast.LENGTH_SHORT;
-        		Toast toast = Toast.makeText(context, text, duration);
-        		toast.show();
+    	
+    		 }
+    	
+    	try{
+    		Drawable iGmail;
+    		iGmail = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.gm");    		
+    		ImageButton bGmail;
+    		bGmail = (ImageButton) findViewById(R.id.bGmail);
+    		bGmail.setImageDrawable(iGmail);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iKeep;
+    		iKeep = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.keep");    		
+    		ImageButton bKeep;
+    		bKeep = (ImageButton) findViewById(R.id.bKeep);
+    		bKeep.setImageDrawable(iKeep);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iMaps;
+    		iMaps = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.maps");    		
+    		ImageButton bMaps;
+    		bMaps = (ImageButton) findViewById(R.id.bMaps);
+    		bMaps.setImageDrawable(iMaps);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iDrive;
+    		iDrive = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.docs");    		
+    		ImageButton bDrive;
+    		bDrive = (ImageButton) findViewById(R.id.bDrive);
+    		bDrive.setImageDrawable(iDrive);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iCurrents;
+    		iCurrents = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.currents");    		
+    		ImageButton bCurrents;
+    		bCurrents = (ImageButton) findViewById(R.id.bCurrents);
+    		bCurrents.setImageDrawable(iCurrents);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
     		 }
     }
     
@@ -126,7 +180,7 @@ public class LauncherActivity extends Activity {
     		if(isAppInstalled("com.google.android.calendar")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.android.chrome");
+    		i = manager.getLaunchIntentForPackage("com.google.android.calendar");
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}

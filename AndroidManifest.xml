@@ -36,16 +36,16 @@
         <activity
             android:name="org.sferadev.dummylauncher.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="org.sferadev.dummylauncher.LauncherActivity" >
+            android:parentActivityName="org.sferadev.dummylauncher.LauncherActivity"
+            android:theme="@android:style/Theme.Holo.Light">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.sferadev.dummylauncher.LauncherActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <action android:name="android.intent.action.LAUNCHER" />
+			</intent-filter>
         </activity>
     </application>
 

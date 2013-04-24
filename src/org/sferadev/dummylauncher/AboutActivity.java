@@ -10,13 +10,14 @@ import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
+import android.preference.PreferenceActivity;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends PreferenceActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_about);
+		addPreferencesFromResource(R.xml.about);
 	}
 
 	 /*public void click_xda(View v) {

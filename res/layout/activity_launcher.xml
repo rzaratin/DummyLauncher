@@ -42,7 +42,7 @@
                 android:orientation="vertical" >
 
                 <Button
-                    android:id="@+id/bApps"
+                    android:id="@+id/bPhone"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -78,7 +78,7 @@
                     android:layout_margin="10dp" >
 
                     <ImageButton
-                        android:id="@+id/bApps"
+                        android:id="@+id/bPhone"
                         android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
@@ -93,7 +93,7 @@
                         android:onClick="onContacts"
                         android:src="@drawable/ic_launcher_contacts" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/bBrowser"
                         android:layout_width="60dp"
                         android:layout_height="70dp"
@@ -105,8 +105,7 @@
                         android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
-                        android:onClick="onCalendar"
-                        android:src="@drawable/ic_launcher_calendar" />
+                        android:onClick="onCalendar" />
 
                 </LinearLayout>
 
@@ -142,39 +141,36 @@
                         android:orientation="horizontal" >
 
                         <ImageButton
-                            android:id="@+id/ImageButton05"
+                            android:id="@+id/bGmail"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
-                            android:onClick="onCurrents"
-                            android:src="@drawable/ic_launcher_currents" />
+                            android:onClick="onMail" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton02"
+                            android:id="@+id/bKeep"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
-                            android:onClick="onKeep"
-                            android:src="@drawable/ic_launcher_keep" />
+                            android:onClick="onKeep" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton03"
+                            android:id="@+id/bMaps"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
-                            android:onClick="onMaps"
-                            android:src="@drawable/ic_launcher_maps" />
+                            android:onClick="onMaps" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton01"
+                            android:id="@+id/bDrive"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:onClick="onDrive"
                             android:src="@drawable/ic_launcher_drive" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton04"
+                            android:id="@+id/bCurrents"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
-                            android:onClick="onCurrents"
-                            android:src="@drawable/ic_launcher_currents" />
+                            android:onClick="onCurrents" />
+
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -189,7 +185,7 @@
                 android:orientation="vertical" >
                 
                 <Button
-                    android:id="@+id/bApps"
+                    android:id="@+id/bPhone"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
