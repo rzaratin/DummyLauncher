@@ -29,7 +29,6 @@ public class LauncherActivity extends Activity {
         
         getIcons();
         
-        
         /* Hide new items if they are not installed
         if(isAppInstalled("com.google.android.googlequicksearchbox")){
         	

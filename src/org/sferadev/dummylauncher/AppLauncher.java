@@ -93,6 +93,7 @@ public class AppLauncher extends ListActivity{
 				//"Hold on...", "Loading your apps...", true);
 	}
 	
+	
 	@Override
 	public void onBackPressed() {
      	Intent intent = new Intent(this, LauncherActivity.class);
@@ -146,8 +147,10 @@ public class AppLauncher extends ListActivity{
 		        		getPackageManager());
  
 		        pList.add(newInfo);
+
 		    }
 		    return pList; 
+		    		    
 		}
  
 		private List<ResolveInfo> createActivityList(){
