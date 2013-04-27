@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:background="#CC0000" >
 
         <LinearLayout
@@ -131,37 +131,42 @@
 
                 <HorizontalScrollView
                     android:id="@+id/horizontalScrollView1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp" >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:orientation="horizontal" >
 
                         <ImageButton
                             android:id="@+id/bGmail"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
+                            android:layout_weight="1"
                             android:onClick="onMail" />
 
                         <ImageButton
                             android:id="@+id/bKeep"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
+                            android:layout_weight="1"
                             android:onClick="onKeep" />
 
                         <ImageButton
                             android:id="@+id/bMaps"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
+                            android:layout_weight="1"
                             android:onClick="onMaps" />
 
                         <ImageButton
                             android:id="@+id/bDrive"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
+                            android:layout_weight="1"
                             android:onClick="onDrive"
                             android:src="@drawable/ic_launcher_drive" />
 
@@ -169,6 +174,7 @@
                             android:id="@+id/bCurrents"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
+                            android:layout_weight="1"
                             android:onClick="onCurrents" />
 
                     </LinearLayout>
