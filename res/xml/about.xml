@@ -38,4 +38,16 @@
 				android:targetPackage="org.sferadev.dummylauncher"
 				android:targetClass="org.sferadev.dummylauncher.onPaypal" />
    </Preference>
+   
+    <PreferenceCategory
+            android:title="Settings"/>
+    <Preference
+    	    android:title="Clear App defaults"
+    	    android:summary="Reset the HOME button to go back to your old launcher.">
+    	    
+    	    <intent
+				android:action="android.intent.action.VIEW"
+				android:targetPackage="org.sferadev.dummylauncher"
+				android:targetClass="org.sferadev.dummylauncher.onResetHome" />
+   </Preference>
    </PreferenceScreen>
