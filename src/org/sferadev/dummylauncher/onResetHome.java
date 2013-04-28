@@ -11,9 +11,8 @@ public class onResetHome extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-	        PackageManager pm = null;
-	        
-	        pm.clearPackagePreferredActivities(PACKAGE_NAME);
+        PackageManager pm = getPackageManager();
+        pm.clearPackagePreferredActivities("org.sferadev.dummylauncher");
 	        
         
 	}
