@@ -14,22 +14,25 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="All your Apps"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#F8F8F8"
-            android:textSize="30sp" />
+            android:textSize="45sp" />
  
 	<ListView
 	    android:id="@android:id/list"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:layout_margin="5dp"
+	    android:layout_marginLeft="30dp"
+	    android:layout_marginRight="30dp"
+	    android:layout_marginTop="30dp"
 	    android:footerDividersEnabled="false"
-	    android:headerDividersEnabled="false" 
-	    android:fastScrollEnabled="true"
-	    android:scrollbarSize="3dp"
+	    android:headerDividersEnabled="false"
+		android:fastScrollEnabled="true"
+	    android:scrollbarSize="5dp"
 	    android:smoothScrollbar="true"/>
  
 </LinearLayout>

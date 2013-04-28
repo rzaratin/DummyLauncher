@@ -16,7 +16,8 @@
         <activity
             android:name="org.sferadev.dummylauncher.LauncherActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +32,8 @@
         </activity>
         <activity
             android:name="org.sferadev.dummylauncher.AppLauncher"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:alwaysRetainTaskState="true" >
         </activity>
         <activity
             android:name="org.sferadev.dummylauncher.AboutActivity"

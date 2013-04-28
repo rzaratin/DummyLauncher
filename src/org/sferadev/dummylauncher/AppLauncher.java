@@ -19,6 +19,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,8 +92,8 @@ public class AppLauncher extends ListActivity{
  
 		//progressDialog = ProgressDialog.show(AppLauncher.this, 
 				//"Hold on...", "Loading your apps...", true);
+		
 	}
-	
 	
 	@Override
 	public void onBackPressed() {
@@ -298,13 +299,13 @@ public class AppLauncher extends ListActivity{
 		try {
 			Intent startApp = new Intent();
 		
-		ComponentName component = new ComponentName(
-				rowClicked.getPackageName(), 
-				rowClicked.getClassName());
-		startApp.setComponent(component);
-		startApp.setAction(Intent.ACTION_MAIN);
+			ComponentName component = new ComponentName(
+					rowClicked.getPackageName(), 
+					rowClicked.getClassName());
+			startApp.setComponent(component);
+			startApp.setAction(Intent.ACTION_MAIN);
  
-		startActivity(startApp);
+			startActivity(startApp);
 		}
 		catch (Exception e) {
 			Context context = getApplicationContext();
