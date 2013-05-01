@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:onClick="onGoogle"
-                    android:text="Search on Google"
+                    android:text="@string/launcher_search"
                     android:textColor="#F0F0F0"
                     android:textSize="20sp" />
 
