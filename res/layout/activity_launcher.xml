@@ -78,7 +78,7 @@
                     android:layout_margin="10dp" >
 
                     <ImageButton
-                        android:id="@+id/bSearch"
+                        android:id="@+id/bPhone"
                         android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:layout_weight="1"
@@ -146,6 +146,13 @@
                             android:layout_height="70dp"
                             android:layout_weight="1"
                             android:onClick="onMail" />
+                        
+                        <ImageButton
+                            android:id="@+id/bPlay"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onPlay" />
 
                         <ImageButton
                             android:id="@+id/bKeep"
@@ -190,7 +197,7 @@
                 android:orientation="vertical" >
                 
                 <Button
-                    android:id="@+id/bSearch"
+                    android:id="@+id/bAll"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"

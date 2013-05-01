@@ -12,7 +12,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -20,7 +23,35 @@ public class LauncherActivity extends Activity {
 	
 	Runnable runme = null;
 	PackageManager pm;
-
+	
+	Button bSearch;
+	ImageButton bPhone;
+	ImageButton bContacts;
+	ImageButton bBrowser;
+	ImageButton bCalendar;
+	ImageButton bGmail;
+	ImageButton bKeep;
+	ImageButton bMaps;
+	ImageButton bDrive;
+	ImageButton bCurrents;
+	ImageButton bPlay;
+	ImageButton b1;
+	ImageButton b2;
+	
+	String sSearch = "com.google.android.googlequicksearchbox";
+	String sFirefox = "org.mozilla.firefox";
+	String sCurrents = "com.google.android.apps.currents";
+	String sDrive = "com.google.android.apps.docs";
+	String sMaps = "com.google.android.apps.maps";
+	String sKeep = "com.google.android.keep";
+	String sGmail = "com.google.android.gm";
+	String sPlay = "com.android.vending";
+	String sPhone = "com.android.contacts";
+	String sContacts = "com.android.contacts.activities.PeopleActivity";
+	String sBrowser = "com.android.browser";
+	String sChrome = "com.android.chrome";
+	String sGCalendar = "com.google.android.calendar";
+	String sCalendar = "com.android.calendar";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,33 +60,58 @@ public class LauncherActivity extends Activity {
         
         getIcons();
         
-        /* Hide new items if they are not installed
-        if(isAppInstalled("com.google.android.googlequicksearchbox")){
-        	
+        hideNotInstalledApps();
+    }
+    
+    public void hideNotInstalledApps(){
+    	// Hide new items if they are not installed
+        
+    	bSearch = (Button) findViewById(R.id.bSearch);
+    	bGmail = (ImageButton) findViewById(R.id.bGmail);
+    	bKeep = (ImageButton) findViewById(R.id.bKeep);
+    	bMaps = (ImageButton) findViewById(R.id.bMaps);
+    	bDrive = (ImageButton) findViewById(R.id.bDrive);
+    	bCurrents = (ImageButton) findViewById(R.id.bCurrents);
+    	bPlay = (ImageButton) findViewById(R.id.bPlay);
+    	    	
+    	if(isNotAppInstalled(sSearch)){
+    		bSearch.setVisibility(View.GONE);
         }
-        else {
-    		
+    	if(isNotAppInstalled(sGmail)){
+    		bGmail.setVisibility(View.GONE);
         }
-        */
+    	if(isNotAppInstalled(sKeep)){
+    		bKeep.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sMaps)){
+    		bMaps.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sDrive)){
+    		bDrive.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sCurrents)){
+    		bCurrents.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sPlay)){
+    		bPlay.setVisibility(View.GONE);
+        }
     }
     
     public void getIcons(){
     	try{
     		Drawable iBrowser;
-    		iBrowser = getBaseContext().getPackageManager().getApplicationIcon("com.android.browser");    		
-    		ImageButton bBrowser;
+    		iBrowser = getBaseContext().getPackageManager().getApplicationIcon(sBrowser);    		
     		bBrowser = (ImageButton) findViewById(R.id.bBrowser);
     		bBrowser.setImageDrawable(iBrowser);
 		}
 		catch (PackageManager.NameNotFoundException ne)
 			{
-	
+
 			}
 		
     	try{
     		Drawable iCalendar;
-    		iCalendar = getBaseContext().getPackageManager().getApplicationIcon("com.android.calendar");    		
-    		ImageButton bCalendar;
+    		iCalendar = getBaseContext().getPackageManager().getApplicationIcon(sCalendar);    		
     		bCalendar = (ImageButton) findViewById(R.id.bCalendar);
     		bCalendar.setImageDrawable(iCalendar);
     		}
@@ -66,8 +122,7 @@ public class LauncherActivity extends Activity {
     	
     	try{
     		Drawable iGmail;
-    		iGmail = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.gm");    		
-    		ImageButton bGmail;
+    		iGmail = getBaseContext().getPackageManager().getApplicationIcon(sGmail);    		
     		bGmail = (ImageButton) findViewById(R.id.bGmail);
     		bGmail.setImageDrawable(iGmail);
     		}
@@ -78,8 +133,7 @@ public class LauncherActivity extends Activity {
     	
     	try{
     		Drawable iKeep;
-    		iKeep = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.keep");    		
-    		ImageButton bKeep;
+    		iKeep = getBaseContext().getPackageManager().getApplicationIcon(sKeep);    		
     		bKeep = (ImageButton) findViewById(R.id.bKeep);
     		bKeep.setImageDrawable(iKeep);
     		}
@@ -90,8 +144,7 @@ public class LauncherActivity extends Activity {
     	
     	try{
     		Drawable iMaps;
-    		iMaps = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.maps");    		
-    		ImageButton bMaps;
+    		iMaps = getBaseContext().getPackageManager().getApplicationIcon(sMaps);    		
     		bMaps = (ImageButton) findViewById(R.id.bMaps);
     		bMaps.setImageDrawable(iMaps);
     		}
@@ -102,8 +155,7 @@ public class LauncherActivity extends Activity {
     	
     	try{
     		Drawable iDrive;
-    		iDrive = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.docs");    		
-    		ImageButton bDrive;
+    		iDrive = getBaseContext().getPackageManager().getApplicationIcon(sDrive);    		
     		bDrive = (ImageButton) findViewById(R.id.bDrive);
     		bDrive.setImageDrawable(iDrive);
     		}
@@ -114,10 +166,20 @@ public class LauncherActivity extends Activity {
     	
     	try{
     		Drawable iCurrents;
-    		iCurrents = getBaseContext().getPackageManager().getApplicationIcon("com.google.android.apps.currents");    		
-    		ImageButton bCurrents;
+    		iCurrents = getBaseContext().getPackageManager().getApplicationIcon(sCurrents);    		
     		bCurrents = (ImageButton) findViewById(R.id.bCurrents);
     		bCurrents.setImageDrawable(iCurrents);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iPlay;
+    		iPlay = getBaseContext().getPackageManager().getApplicationIcon(sPlay);    		
+    		bPlay = (ImageButton) findViewById(R.id.bPlay);
+    		bPlay.setImageDrawable(iPlay);
     		}
     		catch (PackageManager.NameNotFoundException ne)
     		 {
@@ -130,6 +192,10 @@ public class LauncherActivity extends Activity {
         this.startActivity(intent);
     }
     
+    public void onAbout(View v){
+    	Intent intent = new Intent(this, AboutActivity.class);
+        this.startActivity(intent);
+    }
     
     private boolean isAppInstalled(String uri) {
     	PackageManager pm = getPackageManager();
@@ -143,27 +209,25 @@ public class LauncherActivity extends Activity {
     	return installed;
     	}
     
+    private boolean isNotAppInstalled(String uri) {
+    	PackageManager pm = getPackageManager();
+    	boolean installed = true;
+    	try {
+    	pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+    	installed = false;
+    	} catch (PackageManager.NameNotFoundException e) {
+    	installed = true;
+    	}
+    	return installed;
+    	}
+    
     public void onGoogle(View v){
     	try{
-    		if(isAppInstalled("com.google.android.googlequicksearchbox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
+    		i = manager.getLaunchIntentForPackage(sSearch);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
-    		}
-    	else{
-    		Context context = getApplicationContext();
-    		CharSequence text = "Google Search not installed";
-    		int duration = Toast.LENGTH_LONG;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		
-    		String url = "https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-    	}
     	}
     		catch (Exception e) {
     			Context context = getApplicationContext();
@@ -176,17 +240,17 @@ public class LauncherActivity extends Activity {
 
     public void onCalendar(View v){
     	try{
-    		if(isAppInstalled("com.google.android.calendar")){
+    		if(isAppInstalled(sGCalendar)){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.calendar");
+    		i = manager.getLaunchIntentForPackage(sGCalendar);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
     	else{
     	Intent i = new Intent();
 		PackageManager manager = getPackageManager();
-		i = manager.getLaunchIntentForPackage("com.android.calendar");
+		i = manager.getLaunchIntentForPackage(sCalendar);
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);	
     	}
@@ -202,17 +266,17 @@ public class LauncherActivity extends Activity {
     
 	public void onBrowser(View v){
 		try{ 
-			if(isAppInstalled("com.android.chrome")){
+			if(isAppInstalled(sChrome)){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.android.chrome");
+    		i = manager.getLaunchIntentForPackage(sChrome);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
     	else{
 		Intent i = new Intent();
 		PackageManager manager = getPackageManager();
-		i = manager.getLaunchIntentForPackage("com.android.browser");
+		i = manager.getLaunchIntentForPackage(sBrowser);
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);
     	}
@@ -227,174 +291,92 @@ public class LauncherActivity extends Activity {
 	}
 
 	public void onContacts(View v){
-		try {
 			Intent i = new Intent(Intent.ACTION_MAIN);
-			i.setComponent(new ComponentName("com.android.contacts","com.android.contacts.activities.PeopleActivity"));
+			i.setComponent(new ComponentName(sPhone, sContacts));
 			startActivity(i);
-		}
-		catch (Exception e) {
-			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
-    		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		}
-	}
+			}
 
 	public void onPhone(View v){
-		try {
 			Intent i = new Intent();
-		PackageManager manager = getPackageManager();
-		i = manager.getLaunchIntentForPackage("com.android.contacts");
-		i.addCategory(Intent.CATEGORY_LAUNCHER);
-		startActivity(i);
-		}
-		catch (Exception e) {
-			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
-    		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		}
-	}
+			PackageManager manager = getPackageManager();
+			i = manager.getLaunchIntentForPackage(sPhone);
+			i.addCategory(Intent.CATEGORY_LAUNCHER);
+			startActivity(i);
+			}
 	
 	public void onMail(View v){
-		try {
-			if(isAppInstalled("com.google.android.gm")){
-    		Intent i = new Intent();
+			Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.gm");
+    		i = manager.getLaunchIntentForPackage(sGmail);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
-    		}
-    	else{
-		Intent i = new Intent();
-		PackageManager manager = getPackageManager();
-		i = manager.getLaunchIntentForPackage("com.android.email");
-		i.addCategory(Intent.CATEGORY_LAUNCHER);
-		startActivity(i);
-    	}
-		}
-		catch (Exception e) {
-			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
-    		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		}
-	}
+			}
 	
 	public void onKeep(View v){
-    	if(isAppInstalled("com.google.android.keep")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.keep");
+    		i = manager.getLaunchIntentForPackage(sKeep);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
-    	else{
-    		Context context = getApplicationContext();
-    		CharSequence text = "Google Keep not installed";
-    		int duration = Toast.LENGTH_LONG;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		
-    		String url = "https://play.google.com/store/apps/details?id=com.google.android.keep";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-    	}
-    		    	
-    }
     
 	public void onMaps(View v){
-    	if(isAppInstalled("com.google.android.apps.maps")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.apps.maps");
+    		i = manager.getLaunchIntentForPackage(sMaps);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
-    	else{
-    		Context context = getApplicationContext();
-    		CharSequence text = "Google Maps not installed";
-    		int duration = Toast.LENGTH_LONG;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		
-    		String url = "https://play.google.com/store/apps/details?id=com.google.android.apps.maps";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-    	}
-    		    	
-    }
 	
 	public void onDrive(View v){
-    	if(isAppInstalled("com.google.android.apps.docs")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.apps.docs");
+    		i = manager.getLaunchIntentForPackage(sDrive);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
-    	else{
-    		Context context = getApplicationContext();
-    		CharSequence text = "Google Drive not installed";
-    		int duration = Toast.LENGTH_LONG;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		
-    		String url = "https://play.google.com/store/apps/details?id=com.google.android.apps.docs";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-    	}
-    		    	
-    }
 	
 	public void onCurrents(View v){
-    	if(isAppInstalled("com.google.android.apps.currents")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("com.google.android.apps.currents");
+    		i = manager.getLaunchIntentForPackage(sCurrents);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
-    		}
-    	else{
-    		Context context = getApplicationContext();
-    		CharSequence text = "Google Currents not installed";
-    		int duration = Toast.LENGTH_LONG;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		
-    		String url = "https://play.google.com/store/apps/details?id=com.google.android.apps.currents";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-    	}
-    		    	
     }
 	
 	public void onFirefox(View v){
-    	if(isAppInstalled("org.mozilla.firefox")){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
-    		i = manager.getLaunchIntentForPackage("org.mozilla.firefox");
+    		i = manager.getLaunchIntentForPackage(sFirefox);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
     		}
-    	else{
-    		
-    	}
 	
-    /*
+	public void onPlay(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sPlay);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.launcher, menu);
         return true;
     }
-    */
-}
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+           case R.id.about:
+                onAbout(null);
+                return true;
+   		}
+        
+        return false;
+    }
+    
 }
