@@ -613,8 +613,16 @@ public class LauncherActivity extends Activity {
     }
     
     public void onApps(View v){
-    	Intent intent = new Intent(this, AppLauncher.class);
-        this.startActivity(intent);
+    	try {
+    		Intent intent = new Intent(this, AppLauncher.class);
+    		this.startActivity(intent);
+    	}
+    	catch (Exception e) {
+    		Context context = getApplicationContext();
+    		int duration = Toast.LENGTH_SHORT;
+    		Toast toast = Toast.makeText(context, R.string.error_launch_app, duration);
+    		toast.show();
+    	}
     }
     
     public void onAbout(View v){
