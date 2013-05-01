@@ -44,7 +44,7 @@ public final class R {
         public static final int bGmail=0x7f09000c;
         public static final int bKeep=0x7f09000d;
         public static final int bMaps=0x7f09000e;
-        public static final int bPhone=0x7f090007;
+        public static final int bSearch=0x7f090007;
         public static final int button_github=0x7f090004;
         public static final int button_paypal=0x7f090005;
         public static final int button_xda=0x7f090003;

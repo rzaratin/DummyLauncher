@@ -7,12 +7,12 @@
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="17" />
-
+   
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme" android:permission="android.permission.SET_PREFERRED_APPLICATIONS">
         <activity
             android:name="org.sferadev.dummylauncher.LauncherActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -52,6 +52,7 @@
         <activity android:name="onXDA"></activity>
         <activity android:name="onGithub"></activity>
         <activity android:name="onPaypal"></activity>
+        <activity android:name="onResetTrebuchet"></activity>
     </application>
 
 </manifest>
