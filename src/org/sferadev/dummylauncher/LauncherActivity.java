@@ -697,9 +697,24 @@ public class LauncherActivity extends Activity {
 	}
 
 	public void onContacts(View v){
-			Intent i = new Intent(Intent.ACTION_MAIN);
-			i.setComponent(new ComponentName(sPhone, sContacts));
-			startActivity(i);
+			try {
+				try{
+				Intent i = new Intent(Intent.ACTION_MAIN);
+				i.setComponent(new ComponentName(sPhone, sContacts));
+				startActivity(i);
+			}
+			catch (Exception e){
+				Intent i = new Intent(Intent.ACTION_MAIN);
+				i.setComponent(new ComponentName(sPhone, "com.android.contacts.ContactsListActivity"));
+				startActivity(i);
+			}
+			}
+			catch (Exception e){
+				Context context = getApplicationContext();
+	    		int duration = Toast.LENGTH_SHORT;
+	    		Toast toast = Toast.makeText(context, R.string.error_launch_app, duration);
+	    		toast.show();
+			}
 			}
 
 	public void onPhone(View v){
