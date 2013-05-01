@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="Title">
+    android:title="@string/title_about">
     
     <PreferenceCategory
             android:title="XDA"/>
     	<Preference
-    	    android:title="Dummy Launcher at XDA"
-    	    android:summary="Give Feedback and report bugs at the official topic">
+    	    android:title="@string/xda"
+    	    android:summary="@string/xda_summary">
     	    
     	    <intent
 				android:action="android.intent.action.VIEW"
@@ -18,8 +18,8 @@
     <PreferenceCategory
             android:title="Github"/>
     <Preference
-    	    android:title="Open Source at Github"
-    	    android:summary="You can code a new feature or translate the app">
+    	    android:title="@string/github"
+    	    android:summary="@string/github_summary">
     	    
     	    <intent
 				android:action="android.intent.action.VIEW"
@@ -30,8 +30,8 @@
     <PreferenceCategory
             android:title="Paypal"/>
     <Preference
-    	    android:title="Donations via Paypal"
-    	    android:summary="PayPal donations do not grant any updates or improvements, they just support the work of the developer. App will remain free without donating.">
+    	    android:title="@string/paypal"
+    	    android:summary="@string/paypal_summary">
     	    
     	    <intent
 				android:action="android.intent.action.VIEW"
@@ -40,10 +40,10 @@
    </Preference>
    
     <PreferenceCategory
-            android:title="Settings"/>
+            android:title="@string/settings_title"/>
     <Preference
-    	    android:title="Clear App defaults"
-    	    android:summary="Reset the HOME button to go back to your old launcher.">
+    	    android:title="@string/settings_defaults_title"
+    	    android:summary="@string/settings_defaults_summary">
     	    
     	    <intent
 				android:action="android.intent.action.VIEW"

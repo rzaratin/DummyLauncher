@@ -30,55 +30,81 @@ public final class R {
         public static final int xda=0x7f020006;
     }
     public static final class id {
-        public static final int about=0x7f09001a;
-        public static final int applauncher_linearlayout=0x7f090014;
-        public static final int applauncherrow_appname=0x7f090019;
-        public static final int applauncherrow_icon=0x7f090017;
-        public static final int applauncherrow_imagelinearlayout=0x7f090016;
-        public static final int applauncherrow_namelinearlayout=0x7f090018;
-        public static final int bAll=0x7f090013;
-        public static final int bBrowser=0x7f09000a;
-        public static final int bCalendar=0x7f09000b;
-        public static final int bContacts=0x7f090009;
-        public static final int bCurrents=0x7f090012;
-        public static final int bDrive=0x7f090011;
-        public static final int bGmail=0x7f09000d;
-        public static final int bKeep=0x7f09000f;
-        public static final int bMaps=0x7f090010;
-        public static final int bPhone=0x7f090008;
-        public static final int bPlay=0x7f09000e;
-        public static final int bSearch=0x7f090007;
-        public static final int button_github=0x7f090004;
-        public static final int button_paypal=0x7f090005;
-        public static final int button_xda=0x7f090003;
-        public static final int cycle=0x7f090015;
-        public static final int horizontalScrollView1=0x7f09000c;
+        public static final int HorizontalScrollView01=0x7f090011;
+        public static final int HorizontalScrollView02=0x7f09001c;
+        public static final int ImageButton07=0x7f09001f;
+        public static final int ImageButton08=0x7f090022;
+        public static final int ImageButton09=0x7f090021;
+        public static final int ImageButton10=0x7f09001d;
+        public static final int ImageButton11=0x7f090020;
+        public static final int ImageButton12=0x7f09001e;
+        public static final int TextView01=0x7f090010;
+        public static final int TextView02=0x7f09001b;
+        public static final int about=0x7f09002a;
+        public static final int applauncher_linearlayout=0x7f090024;
+        public static final int applauncherrow_appname=0x7f090029;
+        public static final int applauncherrow_icon=0x7f090027;
+        public static final int applauncherrow_imagelinearlayout=0x7f090026;
+        public static final int applauncherrow_namelinearlayout=0x7f090028;
+        public static final int bAll=0x7f090023;
+        public static final int bBrowser=0x7f090006;
+        public static final int bCalendar=0x7f090007;
+        public static final int bContacts=0x7f090005;
+        public static final int bCurrents=0x7f09000f;
+        public static final int bDrive=0x7f09000e;
+        public static final int bFacebook=0x7f090016;
+        public static final int bGmail=0x7f09000a;
+        public static final int bInstagram=0x7f090018;
+        public static final int bKeep=0x7f09000c;
+        public static final int bLine=0x7f090013;
+        public static final int bMaps=0x7f09000d;
+        public static final int bPhone=0x7f090004;
+        public static final int bPlay=0x7f09000b;
+        public static final int bSearch=0x7f090002;
+        public static final int bSkype=0x7f090015;
+        public static final int bTapatalk=0x7f09001a;
+        public static final int bTuenti=0x7f090019;
+        public static final int bTwitter=0x7f090017;
+        public static final int bViber=0x7f090014;
+        public static final int bWhatsApp=0x7f090012;
+        public static final int cycle=0x7f090025;
+        public static final int horizontalScrollView1=0x7f090009;
         public static final int scrollView1=0x7f090000;
         public static final int textView1=0x7f090001;
-        public static final int textView2=0x7f090002;
-        public static final int textView3=0x7f090006;
+        public static final int textView2=0x7f090003;
+        public static final int textView3=0x7f090008;
     }
     public static final class layout {
-        public static final int activity_about=0x7f030000;
-        public static final int activity_launcher=0x7f030001;
-        public static final int applauncher=0x7f030002;
-        public static final int applauncherrow=0x7f030003;
+        public static final int activity_launcher=0x7f030000;
+        public static final int applauncher=0x7f030001;
+        public static final int applauncherrow=0x7f030002;
     }
     public static final class menu {
         public static final int launcher=0x7f080000;
     }
     public static final class string {
-        public static final int about=0x7f060004;
-        public static final int about_donations=0x7f06000a;
-        public static final int about_text=0x7f060006;
-        public static final int about_title=0x7f060005;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int button_github=0x7f060008;
-        public static final int button_paypal=0x7f060009;
-        public static final int button_xda=0x7f060007;
+        public static final int applauncher_all=0x7f06000c;
+        public static final int error_launch_app=0x7f060004;
+        public static final int github=0x7f06000f;
+        public static final int github_summary=0x7f060010;
         public static final int hello_world=0x7f060002;
-        public static final int title_activity_about=0x7f060003;
+        public static final int launcher_all_apps=0x7f060009;
+        public static final int launcher_comm=0x7f06000a;
+        public static final int launcher_common=0x7f060007;
+        public static final int launcher_games=0x7f06000b;
+        public static final int launcher_google_apps=0x7f060008;
+        public static final int launcher_search=0x7f060006;
+        public static final int launcher_welcome=0x7f060005;
+        public static final int paypal=0x7f060011;
+        public static final int paypal_summary=0x7f060012;
+        public static final int settings_defaults_summary=0x7f060015;
+        public static final int settings_defaults_title=0x7f060014;
+        public static final int settings_title=0x7f060013;
+        public static final int title_about=0x7f060003;
+        public static final int xda=0x7f06000d;
+        public static final int xda_summary=0x7f06000e;
     }
     public static final class style {
         /** 

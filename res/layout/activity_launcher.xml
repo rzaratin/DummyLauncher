@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:gravity="center"
-                    android:text="Welcome to Android"
+                    android:text="@string/launcher_welcome"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#F0F0F0"
                     android:textSize="50sp" />
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:gravity="center"
-                    android:text="Common Apps"
+                    android:text="@string/launcher_common"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#F0F0F0"
                     android:textSize="30sp" />
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:gravity="center"
-                    android:text="Google Apps"
+                    android:text="@string/launcher_google_apps"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#F0F0F0"
                     android:textSize="30sp" />
@@ -195,6 +195,176 @@
                 android:layout_margin="10dp"
                 android:background="#FF8800"
                 android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="@string/launcher_comm"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#F0F0F0"
+                    android:textSize="30sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/bWhatsApp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onWhatsApp" />
+
+                        <ImageButton
+                            android:id="@+id/bLine"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onLine" />
+                        
+                        <ImageButton
+                            android:id="@+id/bViber"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onViber" />
+
+                        <ImageButton
+                            android:id="@+id/bSkype"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onSkype" />
+
+                        <ImageButton
+                            android:id="@+id/bFacebook"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onFacebook" />
+
+                        <ImageButton
+                            android:id="@+id/bTwitter"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTwitter" />
+
+                        <ImageButton
+                            android:id="@+id/bInstagram"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onInstagram" />
+                        
+                        <ImageButton
+                            android:id="@+id/bTuenti"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTuenti" />
+                        
+                        <ImageButton
+                            android:id="@+id/bTapatalk"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTapatalk" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FF8800"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="@string/launcher_games"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#F0F0F0"
+                    android:textSize="30sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/ImageButton10"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onMail" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton12"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onPlay" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton07"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onKeep" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton11"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onMaps" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton09"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onDrive"
+                            android:src="@drawable/ic_launcher_drive" />
+
+                        <ImageButton
+                            android:id="@+id/ImageButton08"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onCurrents" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FF8800"
+                android:orientation="vertical" >
                 
                 <Button
                     android:id="@+id/bAll"
@@ -202,9 +372,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:onClick="onApps"
-                    android:text="All your Apps"
+                    android:text="@string/launcher_all_apps"
                     android:textColor="#F0F0F0"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -35,8 +35,15 @@ public class LauncherActivity extends Activity {
 	ImageButton bDrive;
 	ImageButton bCurrents;
 	ImageButton bPlay;
-	ImageButton b1;
-	ImageButton b2;
+	ImageButton bWhatsApp;
+	ImageButton bLine;
+	ImageButton bSkype;
+	ImageButton bViber;
+	ImageButton bFacebook;
+	ImageButton bTwitter;
+	ImageButton bTuenti;
+	ImageButton bInstagram;
+	ImageButton bTapatalk;
 	
 	String sSearch = "com.google.android.googlequicksearchbox";
 	String sFirefox = "org.mozilla.firefox";
@@ -52,6 +59,15 @@ public class LauncherActivity extends Activity {
 	String sChrome = "com.android.chrome";
 	String sGCalendar = "com.google.android.calendar";
 	String sCalendar = "com.android.calendar";
+	String sWhatsApp = "com.whatsapp";
+	String sLine = "jp.naver.line.android";
+	String sSkype = "com.skype.raider";
+	String sViber = "com.viber.voip";
+	String sFacebook = "com.facebook.katana";
+	String sTwitter = "com.twitter.android";
+	String sTuenti = "com.tuenti.android.client";
+	String sInstagram = "com.instagram.android";
+	String sTapatalk = "com.quoord.tapatalkpro.activity";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +89,15 @@ public class LauncherActivity extends Activity {
     	bDrive = (ImageButton) findViewById(R.id.bDrive);
     	bCurrents = (ImageButton) findViewById(R.id.bCurrents);
     	bPlay = (ImageButton) findViewById(R.id.bPlay);
+    	bWhatsApp = (ImageButton) findViewById(R.id.bWhatsApp);
+    	bLine = (ImageButton) findViewById(R.id.bLine);
+    	bSkype = (ImageButton) findViewById(R.id.bSkype);
+    	bViber = (ImageButton) findViewById(R.id.bViber);
+    	bFacebook = (ImageButton) findViewById(R.id.bFacebook);
+    	bTwitter = (ImageButton) findViewById(R.id.bTwitter);
+    	bInstagram = (ImageButton) findViewById(R.id.bInstagram);
+    	bTuenti = (ImageButton) findViewById(R.id.bTuenti);
+    	bTapatalk = (ImageButton) findViewById(R.id.bTapatalk);
     	    	
     	if(isNotAppInstalled(sSearch)){
     		bSearch.setVisibility(View.GONE);
@@ -94,6 +119,33 @@ public class LauncherActivity extends Activity {
         }
     	if(isNotAppInstalled(sPlay)){
     		bPlay.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sWhatsApp)){
+    		bWhatsApp.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sLine)){
+    		bLine.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sSkype)){
+    		bSkype.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sViber)){
+    		bViber.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sFacebook)){
+    		bFacebook.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTwitter)){
+    		bTwitter.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTuenti)){
+    		bTuenti.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sInstagram)){
+    		bInstagram.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTapatalk)){
+    		bTapatalk.setVisibility(View.GONE);
         }
     }
     
@@ -185,6 +237,105 @@ public class LauncherActivity extends Activity {
     		 {
     	
     		 }
+    	
+    	try{
+    		Drawable iWhatsApp;
+    		iWhatsApp = getBaseContext().getPackageManager().getApplicationIcon(sWhatsApp);    		
+    		bWhatsApp = (ImageButton) findViewById(R.id.bWhatsApp);
+    		bWhatsApp.setImageDrawable(iWhatsApp);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iLine;
+    		iLine = getBaseContext().getPackageManager().getApplicationIcon(sLine);    		
+    		bLine = (ImageButton) findViewById(R.id.bLine);
+    		bLine.setImageDrawable(iLine);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iSkype;
+    		iSkype = getBaseContext().getPackageManager().getApplicationIcon(sSkype);    		
+    		bSkype = (ImageButton) findViewById(R.id.bSkype);
+    		bSkype.setImageDrawable(iSkype);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iViber;
+    		iViber = getBaseContext().getPackageManager().getApplicationIcon(sViber);    		
+    		bViber = (ImageButton) findViewById(R.id.bViber);
+    		bViber.setImageDrawable(iViber);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iFacebook;
+    		iFacebook = getBaseContext().getPackageManager().getApplicationIcon(sFacebook);    		
+    		bFacebook = (ImageButton) findViewById(R.id.bFacebook);
+    		bFacebook.setImageDrawable(iFacebook);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTwitter;
+    		iTwitter = getBaseContext().getPackageManager().getApplicationIcon(sTwitter);    		
+    		bTwitter = (ImageButton) findViewById(R.id.bTwitter);
+    		bTwitter.setImageDrawable(iTwitter);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTuenti;
+    		iTuenti = getBaseContext().getPackageManager().getApplicationIcon(sTuenti);    		
+    		bTuenti = (ImageButton) findViewById(R.id.bTuenti);
+    		bTuenti.setImageDrawable(iTuenti);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iInstagram;
+    		iInstagram = getBaseContext().getPackageManager().getApplicationIcon(sInstagram);    		
+    		bInstagram = (ImageButton) findViewById(R.id.bInstagram);
+    		bInstagram.setImageDrawable(iInstagram);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTapatalk;
+    		iTapatalk = getBaseContext().getPackageManager().getApplicationIcon(sTapatalk);    		
+    		bTapatalk = (ImageButton) findViewById(R.id.bTapatalk);
+    		bTapatalk.setImageDrawable(iTapatalk);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
     }
     
     public void onApps(View v){
@@ -222,24 +373,14 @@ public class LauncherActivity extends Activity {
     	}
     
     public void onGoogle(View v){
-    	try{
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
     		i = manager.getLaunchIntentForPackage(sSearch);
     		i.addCategory(Intent.CATEGORY_LAUNCHER);
     		startActivity(i);
-    	}
-    		catch (Exception e) {
-    			Context context = getApplicationContext();
-        		CharSequence text = "Unable to launch this App";
-        		int duration = Toast.LENGTH_SHORT;
-        		Toast toast = Toast.makeText(context, text, duration);
-        		toast.show();
-        		}
-    }
+    	    }
 
     public void onCalendar(View v){
-    	try{
     		if(isAppInstalled(sGCalendar)){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
@@ -254,18 +395,9 @@ public class LauncherActivity extends Activity {
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);	
     	}
-    	}
-    	catch (Exception e) {
-			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
-    		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    	}
-	}
+   	}
     
 	public void onBrowser(View v){
-		try{ 
 			if(isAppInstalled(sChrome)){
     		Intent i = new Intent();
     		PackageManager manager = getPackageManager();
@@ -280,14 +412,6 @@ public class LauncherActivity extends Activity {
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 		startActivity(i);
     	}
-		}
-		catch (Exception e) {
-			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
-    		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
-    		toast.show();
-    		}
 	}
 
 	public void onContacts(View v){
@@ -360,7 +484,76 @@ public class LauncherActivity extends Activity {
 		startActivity(i);
 		}
 	
-    
+	public void onWhatsApp(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sWhatsApp);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onLine(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sLine);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onSkype(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sSkype);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onViber(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sViber);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onFacebook(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sFacebook);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onTwitter(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sTwitter);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onTuenti(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sTuenti);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onInstagram(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sInstagram);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onTapatalk(View v){
+		Intent i = new Intent(Intent.ACTION_MAIN);
+		i.setComponent(new ComponentName(sTapatalk, "com.quoord.tapatalkpro.activity.directory.EntryActivity"));
+		startActivity(i);
+	}
+	
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

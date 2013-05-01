@@ -31,7 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
  
-/*Under development
+/* Reference older features
 	1st Try
 	IntentFilter filter = new IntentFilter();
 		filter.addAction("android.intent.action.MAIN");
@@ -309,9 +309,8 @@ public class AppLauncher extends ListActivity{
 		}
 		catch (Exception e) {
 			Context context = getApplicationContext();
-    		CharSequence text = "Unable to launch this App";
     		int duration = Toast.LENGTH_SHORT;
-    		Toast toast = Toast.makeText(context, text, duration);
+    		Toast toast = Toast.makeText(context, R.string.error_launch_app, duration);
     		toast.show();
     		}
 	}
