@@ -18,7 +18,7 @@ public class onXDA extends Activity {
         
         
         public void github() {
-	        String url = "";
+	        String url = "http://forum.xda-developers.com/showthread.php?t=2259463";
 	        Intent i = new Intent(Intent.ACTION_VIEW);
 	        i.setData(Uri.parse(url));
 	        startActivity(i);
