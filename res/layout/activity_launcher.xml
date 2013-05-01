@@ -314,48 +314,118 @@
                         android:orientation="horizontal" >
 
                         <ImageButton
-                            android:id="@+id/ImageButton10"
+                            android:id="@+id/bTriviados"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onMail" />
+                            android:onClick="onTriviados" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton12"
+                            android:id="@+id/bPou"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onPlay" />
+                            android:onClick="onPou" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton07"
+                            android:id="@+id/bApalabrados"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onKeep" />
+                            android:onClick="onApalabrados" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton11"
+                            android:id="@+id/bAngry"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onMaps" />
+                            android:onClick="onAngry" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton09"
+                            android:id="@+id/bAngrySW"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onDrive"
-                            android:src="@drawable/ic_launcher_drive" />
+                            android:onClick="onAngrySW" />
 
                         <ImageButton
-                            android:id="@+id/ImageButton08"
+                            android:id="@+id/bAngryRio"
                             android:layout_width="80dp"
                             android:layout_height="70dp"
                             android:layout_weight="1"
-                            android:onClick="onCurrents" />
+                            android:onClick="onAngryRio" />
+
+                        <ImageButton
+                            android:id="@+id/bCut1"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onCut1" />
+
+                        <ImageButton
+                            android:id="@+id/bFloor"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onFloor" />
+
+                        <ImageButton
+                            android:id="@+id/bBike"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onBike" />
+
+                        <ImageButton
+                            android:id="@+id/bIron"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onIron" />
+
+                        <ImageButton
+                            android:id="@+id/bTemple1"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTemple1" />
+
+                        <ImageButton
+                            android:id="@+id/bTemple2"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTemple2" />
+
+                        <ImageButton
+                            android:id="@+id/bMinecraft"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onMinecraft" />
+
+                        <ImageButton
+                            android:id="@+id/bDraw"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onDraw" />
+
+                        <ImageButton
+                            android:id="@+id/bWordCrack"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onWordCrack" />
+
+                        <ImageButton
+                            android:id="@+id/bIngress"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onIngress" />
                     </LinearLayout>
+
                 </HorizontalScrollView>
             </LinearLayout>
 

@@ -198,6 +198,248 @@
                 android:layout_margin="10dp"
                 android:background="#FF8800"
                 android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="@string/launcher_comm"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#F0F0F0"
+                    android:textSize="30sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/bWhatsApp"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onWhatsApp" />
+
+                        <ImageButton
+                            android:id="@+id/bLine"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onLine" />
+                        
+                        <ImageButton
+                            android:id="@+id/bViber"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onViber" />
+
+                        <ImageButton
+                            android:id="@+id/bSkype"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onSkype" />
+
+                        <ImageButton
+                            android:id="@+id/bFacebook"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onFacebook" />
+
+                        <ImageButton
+                            android:id="@+id/bTwitter"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTwitter" />
+
+                        <ImageButton
+                            android:id="@+id/bInstagram"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onInstagram" />
+                        
+                        <ImageButton
+                            android:id="@+id/bTuenti"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTuenti" />
+                        
+                        <ImageButton
+                            android:id="@+id/bTapatalk"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTapatalk" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FF8800"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="@string/launcher_games"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#F0F0F0"
+                    android:textSize="30sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/bTriviados"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTriviados" />
+
+                        <ImageButton
+                            android:id="@+id/bPou"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onPou" />
+
+                        <ImageButton
+                            android:id="@+id/bApalabrados"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onApalabrados" />
+
+                        <ImageButton
+                            android:id="@+id/bAngry"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onAngry" />
+
+                        <ImageButton
+                            android:id="@+id/bAngrySW"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onAngrySW" />
+
+                        <ImageButton
+                            android:id="@+id/bAngryRio"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onAngryRio" />
+
+                        <ImageButton
+                            android:id="@+id/bCut1"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onCut1" />
+
+                        <ImageButton
+                            android:id="@+id/bFloor"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onFloor" />
+
+                        <ImageButton
+                            android:id="@+id/bBike"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onBike" />
+
+                        <ImageButton
+                            android:id="@+id/bIron"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onIron" />
+
+                        <ImageButton
+                            android:id="@+id/bTemple1"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTemple1" />
+
+                        <ImageButton
+                            android:id="@+id/bTemple2"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onTemple2" />
+
+                        <ImageButton
+                            android:id="@+id/bMinecraft"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onMinecraft" />
+
+                        <ImageButton
+                            android:id="@+id/bDraw"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onDraw" />
+
+                        <ImageButton
+                            android:id="@+id/bWordCrack"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onWordCrack" />
+
+                        <ImageButton
+                            android:id="@+id/bIngress"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:onClick="onIngress" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FF8800"
+                android:orientation="vertical" >
                 
                 <Button
                     android:id="@+id/bAll"

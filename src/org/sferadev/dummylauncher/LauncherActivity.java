@@ -44,6 +44,22 @@ public class LauncherActivity extends Activity {
 	ImageButton bTuenti;
 	ImageButton bInstagram;
 	ImageButton bTapatalk;
+	ImageButton bTriviados;
+	ImageButton bPou;
+	ImageButton bCut1;
+	ImageButton bFloor;
+	ImageButton bApalabrados;
+	ImageButton bAngry;
+	ImageButton bBike;
+	ImageButton bIron;
+	ImageButton bTemple1;
+	ImageButton bTemple2;
+	ImageButton bAngrySW;
+	ImageButton bMinecraft;
+	ImageButton bAngryRio;
+	ImageButton bDraw;
+	ImageButton bWordCrack;
+	ImageButton bIngress;
 	
 	String sSearch = "com.google.android.googlequicksearchbox";
 	String sFirefox = "org.mozilla.firefox";
@@ -68,6 +84,23 @@ public class LauncherActivity extends Activity {
 	String sTuenti = "com.tuenti.android.client";
 	String sInstagram = "com.instagram.android";
 	String sTapatalk = "com.quoord.tapatalkpro.activity";
+	String sTriviados = "aul.irm.triviados";
+	String sPou = "me.pou.app";
+	String sCut1 = "com.zeptolab.timetravel.free.google";
+	String sFloor = "cento.n2.lib";
+	String sApalabrados = "com.etermax.apalabrados.lite";
+	String sAngry = "com.rovio.angrybirds";
+	String sBike = "com.topfreegames.bikeracefreeworld";
+	String sIron = "com.gameloft.android.ANMP.GloftIMHM";
+	String sTemple1 = "com.imangi.templerun";
+	String sTemple2 = "com.imangi.templerun2";
+	String sAngrySW = "com.rovio.angrybirdsstarwars.ads.iap";
+	String sMinecraft = "com.mojang.minecraftpe.demo";
+	String sAngryRio = "com.rovio.angrybirdsrio";
+	String sDraw = "com.omgpop.dstfree";
+	String sWordCrack = "com.etermax.wordcrack.lite";
+	String sIngress = "com.nianticproject.ingress";
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +131,24 @@ public class LauncherActivity extends Activity {
     	bInstagram = (ImageButton) findViewById(R.id.bInstagram);
     	bTuenti = (ImageButton) findViewById(R.id.bTuenti);
     	bTapatalk = (ImageButton) findViewById(R.id.bTapatalk);
-    	    	
+    	
+    	bTriviados = (ImageButton) findViewById(R.id.bTriviados);
+    	bPou = (ImageButton) findViewById(R.id.bPou);
+    	bCut1 = (ImageButton) findViewById(R.id.bCut1);
+    	bFloor = (ImageButton) findViewById(R.id.bFloor);
+    	bApalabrados = (ImageButton) findViewById(R.id.bApalabrados);
+    	bAngry = (ImageButton) findViewById(R.id.bAngry);
+    	bAngrySW = (ImageButton) findViewById(R.id.bAngrySW);
+    	bAngryRio = (ImageButton) findViewById(R.id.bAngryRio);
+    	bBike = (ImageButton) findViewById(R.id.bBike);
+    	bIron = (ImageButton) findViewById(R.id.bIron);
+    	bTemple1 = (ImageButton) findViewById(R.id.bTemple1);
+    	bTemple2 = (ImageButton) findViewById(R.id.bTemple2);
+    	bMinecraft = (ImageButton) findViewById(R.id.bMinecraft);
+    	bDraw = (ImageButton) findViewById(R.id.bDraw);
+    	bWordCrack = (ImageButton) findViewById(R.id.bWordCrack);
+    	bIngress = (ImageButton) findViewById(R.id.bIngress);    	
+    	
     	if(isNotAppInstalled(sSearch)){
     		bSearch.setVisibility(View.GONE);
         }
@@ -146,6 +196,54 @@ public class LauncherActivity extends Activity {
         }
     	if(isNotAppInstalled(sTapatalk)){
     		bTapatalk.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTriviados)){
+    		bTriviados.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sPou)){
+    		bPou.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sCut1)){
+    		bCut1.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sFloor)){
+    		bFloor.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sApalabrados)){
+    		bApalabrados.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sAngry)){
+    		bAngry.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sAngrySW)){
+    		bAngrySW.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sAngryRio)){
+    		bAngryRio.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sBike)){
+    		bBike.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sIron)){
+    		bIron.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTemple1)){
+    		bTemple1.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sTemple2)){
+    		bTemple2.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sMinecraft)){
+    		bMinecraft.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sDraw)){
+    		bDraw.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sWordCrack)){
+    		bWordCrack.setVisibility(View.GONE);
+        }
+    	if(isNotAppInstalled(sIngress)){
+    		bIngress.setVisibility(View.GONE);
         }
     }
     
@@ -331,6 +429,182 @@ public class LauncherActivity extends Activity {
     		iTapatalk = getBaseContext().getPackageManager().getApplicationIcon(sTapatalk);    		
     		bTapatalk = (ImageButton) findViewById(R.id.bTapatalk);
     		bTapatalk.setImageDrawable(iTapatalk);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTriviados;
+    		iTriviados = getBaseContext().getPackageManager().getApplicationIcon(sTriviados);    		
+    		bTriviados = (ImageButton) findViewById(R.id.bTriviados);
+    		bTriviados.setImageDrawable(iTriviados);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iPou;
+    		iPou = getBaseContext().getPackageManager().getApplicationIcon(sPou);    		
+    		bPou = (ImageButton) findViewById(R.id.bPou);
+    		bPou.setImageDrawable(iPou);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iCut1;
+    		iCut1 = getBaseContext().getPackageManager().getApplicationIcon(sCut1);    		
+    		bCut1 = (ImageButton) findViewById(R.id.bCut1);
+    		bCut1.setImageDrawable(iCut1);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iFloor;
+    		iFloor = getBaseContext().getPackageManager().getApplicationIcon(sFloor);    		
+    		bFloor = (ImageButton) findViewById(R.id.bFloor);
+    		bFloor.setImageDrawable(iFloor);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iApalabrados;
+    		iApalabrados = getBaseContext().getPackageManager().getApplicationIcon(sApalabrados);    		
+    		bApalabrados = (ImageButton) findViewById(R.id.bApalabrados);
+    		bApalabrados.setImageDrawable(iApalabrados);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iAngry;
+    		iAngry = getBaseContext().getPackageManager().getApplicationIcon(sAngry);    		
+    		bAngry = (ImageButton) findViewById(R.id.bAngry);
+    		bAngry.setImageDrawable(iAngry);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iAngrySW;
+    		iAngrySW = getBaseContext().getPackageManager().getApplicationIcon(sAngrySW);    		
+    		bAngrySW = (ImageButton) findViewById(R.id.bAngrySW);
+    		bAngrySW.setImageDrawable(iAngrySW);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iAngryRio;
+    		iAngryRio = getBaseContext().getPackageManager().getApplicationIcon(sAngryRio);    		
+    		bAngryRio = (ImageButton) findViewById(R.id.bAngryRio);
+    		bAngryRio.setImageDrawable(iAngryRio);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iBike;
+    		iBike = getBaseContext().getPackageManager().getApplicationIcon(sBike);    		
+    		bBike = (ImageButton) findViewById(R.id.bBike);
+    		bBike.setImageDrawable(iBike);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iIron;
+    		iIron = getBaseContext().getPackageManager().getApplicationIcon(sIron);    		
+    		bIron = (ImageButton) findViewById(R.id.bIron);
+    		bIron.setImageDrawable(iIron);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTemple1;
+    		iTemple1 = getBaseContext().getPackageManager().getApplicationIcon(sTemple1);    		
+    		bTemple1 = (ImageButton) findViewById(R.id.bTemple1);
+    		bTemple1.setImageDrawable(iTemple1);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iTemple2;
+    		iTemple2 = getBaseContext().getPackageManager().getApplicationIcon(sTemple2);    		
+    		bTemple2 = (ImageButton) findViewById(R.id.bTemple2);
+    		bTemple2.setImageDrawable(iTemple2);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iMinecraft;
+    		iMinecraft = getBaseContext().getPackageManager().getApplicationIcon(sMinecraft);    		
+    		bMinecraft = (ImageButton) findViewById(R.id.bMinecraft);
+    		bMinecraft.setImageDrawable(iMinecraft);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iDraw;
+    		iDraw = getBaseContext().getPackageManager().getApplicationIcon(sDraw);    		
+    		bDraw = (ImageButton) findViewById(R.id.bDraw);
+    		bDraw.setImageDrawable(iDraw);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iWordCrack;
+    		iWordCrack = getBaseContext().getPackageManager().getApplicationIcon(sWordCrack);    		
+    		bWordCrack = (ImageButton) findViewById(R.id.bWordCrack);
+    		bWordCrack.setImageDrawable(iWordCrack);
+    		}
+    		catch (PackageManager.NameNotFoundException ne)
+    		 {
+    	
+    		 }
+    	
+    	try{
+    		Drawable iIngress;
+    		iIngress = getBaseContext().getPackageManager().getApplicationIcon(sIngress);    		
+    		bIngress = (ImageButton) findViewById(R.id.bIngress);
+    		bIngress.setImageDrawable(iIngress);
     		}
     		catch (PackageManager.NameNotFoundException ne)
     		 {
@@ -553,6 +827,134 @@ public class LauncherActivity extends Activity {
 		i.setComponent(new ComponentName(sTapatalk, "com.quoord.tapatalkpro.activity.directory.EntryActivity"));
 		startActivity(i);
 	}
+	
+	public void onTriviados(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sTriviados);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onPou(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sPou);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onCut1(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sCut1);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onFloor(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sFloor);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onApalabrados(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sApalabrados);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onAngry(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sAngry);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onAngrySW(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sAngrySW);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onAngryRio(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sAngryRio);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onBike(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sBike);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onIron(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sIron);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onTemple1(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sTemple1);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onTemple2(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sTemple2);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onMinecraft(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sMinecraft);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onDraw(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sDraw);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onWordCrack(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sWordCrack);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
+	
+	public void onIngress(View v){
+		Intent i = new Intent();
+		PackageManager manager = getPackageManager();
+		i = manager.getLaunchIntentForPackage(sIngress);
+		i.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(i);
+		}
 	
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
