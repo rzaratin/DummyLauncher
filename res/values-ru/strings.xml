@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dummy Launcher</string>
+    <string name="action_settings">Настройки</string>
+    <string name="hello_world">Привет, мир!</string>
+    <string name="title_about">Простой лончер</string>
+
+  <string name="error_launch_app">Невозможно запустить это приложение</string>
+   
+	<string name="launcher_welcome">Добро пожаловать в Андроид</string>
+	<string name="launcher_search">Поиск в Google</string>
+	<string name="launcher_common">Общие приложения</string>
+	<string name="launcher_google_apps">Приложения Google</string>
+	<string name="launcher_all_apps">Все Ваши приложения</string>
+	<string name="launcher_comm">Коммуникация</string>
+	<string name="launcher_games">Игры</string>
+
+	<string name="applauncher_all">Все Ваши приложения</string>
+
+    <string name="xda">Dummy Launcher на XDA</string>
+    <string name="xda_summary">Оставьте отзыв и сообщите об ошибках в официальной теме.</string>
+    <string name="github">Открытый исходный код на GitHub</string>
+    <string name="github_summary">Можете добавить новую функцию или перевести приложение.</string>
+    <string name="paypal">Пожертвования через Paypal</string>
+    <string name="paypal_summary">Пожертвования через PayPal не гарантируют обновлений или улучшений, они просто поддерживают труд разработчика. Приложение будет оставаться бесплатным и без пожертвований.</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_defaults_title">Очистить умолчания</string>
+    <string name="settings_defaults_summary">Сброс кнопки ДОМОЙ для возврата к Вашему старому лончеру.</string>
+</resources>
