@@ -8,8 +8,8 @@
 
 	<string name="error_launch_app">Uygulama baþlatýlamýyor</string>
    
-	<string name="launcher_welcome">Android'e Hoþgeldiniz</string>
-	<string name="launcher_search">Google'da Ara</string>
+	<string name="launcher_welcome">Android\'e Hoþgeldiniz</string>
+	<string name="launcher_search">Google\'da Ara</string>
 	<string name="launcher_common">Ortak Uygulamalar</string>
 	<string name="launcher_google_apps">Google Uygulamalarý</string>
 	<string name="launcher_all_apps">Tüm Uygulamalar</string>
