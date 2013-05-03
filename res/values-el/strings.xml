@@ -1,0 +1,29 @@
+<resources>
+
+<string name="app_name">Dummy Launcher</string>
+<string name="action_settings">ρυθμίσεις</string>
+<string name="hello_world">Γεια σου κόσμε!</string>
+<string name="title_about">Dummy Launcher</string>
+
+<string name="error_launch_app">Αδυναμια εκκινησης αυτης της εφαρμογης</string>
+
+<string name="launcher_welcome">Καλωσορίσατε στο Android</string>
+<string name="launcher_search">Αναζήτηση στο google</string>
+<string name="launcher_common">Συνηθισμένες εφαρμογές</string>
+<string name="launcher_google_apps">Εφαρμογές Google</string>
+<string name="launcher_all_apps">Όλες η εφαρμογές</string>
+<string name="launcher_comm">Επικοινωνία</string>
+<string name="launcher_games">Παιχνίδια</string>
+
+<string name="applauncher_all">Όλες η εφαρμογές</string>
+
+<string name="xda">Dummy Launcher στο XDA</string>
+<string name="xda_summary">Αφήστε σχόλια και τυχόν προβλήματα στο επίσημο topic.</string>
+<string name="github">Open Source στο GitHub</string>
+<string name="github_summary">Μπορείτε να φτιάξετε ένα νέο χαρακτηριστικό ή να μεταφράσετε το app</string>
+<string name="paypal">Δωρεές μέσω Paypal</string>
+<string name="paypal_summary">Οι δωρεές μεσώ paypal δεν παρέχουν οποιαδήποτε ενημέρωση ή βελτιώσεις απλώς υποστηρίζουν το έργο του δημιουργού. Η εφαρμογή θα παραμείνει δωρεάν και χωρίς δωρεά.</string>
+<string name="settings_title">ρυθμίσεις</string>
+<string name="settings_defaults_title">Εκκαθάριση προεπιλογών εφαρμογής</string>
+<string name="settings_defaults_summary">Επαναφέρετε το κουμπί HOME για να επιστρέψετε στον παλιό σας Launcher.</string>
+</resources>
