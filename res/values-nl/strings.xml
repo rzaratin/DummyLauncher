@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dummy Launcher</string>
+    <string name="action_Instellingen">Instellingen</string>
+    <string name="hello_world">Hallo wereld!</string>
+    <string name="title_about">Dummy Launcher</string>
+
+	<string name="error_launch_app">App openen mislukt</string>
+   
+	<string name="launcher_welcome">Welkom in Android</string>
+	<string name="launcher_search">Zoeken met Google</string>
+	<string name="launcher_common">Recente Apps</string>
+	<string name="launcher_google_apps">Google Apps</string>
+	<string name="launcher_all_apps">Al je Apps</string>
+	<string name="launcher_comm">Communicatie</string>
+	<string name="launcher_games">Spelletjes</string>
+	
+	<string name="applauncher_all">Al je Apps</string>
+	
+    <string name="xda">Dummy Launcher op XDA</string>
+    <string name="xda_summary">Geef feedback en meld fouten in het officiele onderwerp.</string>
+    <string name="github">Open Source op GitHub</string>
+    <string name="github_summary">Je kan een nieuwe optie programmeren of de app vertalen.</string>
+    <string name="paypal">Schenkingen via Paypal</string>
+    <string name="paypal_summary">PayPal schenkingen geven geen voorrecht op updates of verbeteringen, ze ondersteunen gewoon het werk van de ontwikkelaar. De applicatie zal gratis blijven zonder schenking.</string>
+    <string name="Instellingen_title">Instellingen</string>
+    <string name="Instellingen_defaults_title">Standaardwaarden app herstellen</string>
+    <string name="Instellingen_defaults_summary">Herstel de HOME knop om terug te gaan naar je vorige launcher.</string>
+</resources>
