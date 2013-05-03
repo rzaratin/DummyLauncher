@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dummy Launcher</string>
+    <string name="action_settings">Configurações</string>
+    <string name="hello_world">Ola Mundo!</string>
+    <string name="title_about">Dummy Launcher</string>
+
+  <string name="error_launch_app">Não foi possível abrir o aplicativo</string>
+   
+	<string name="launcher_welcome">Bem vindo ao Android</string>
+	<string name="launcher_search">Procurar no Google</string>
+	<string name="launcher_common">Aplicativos comuns</string>
+	<string name="launcher_google_apps">Aplicativos do Google</string>
+	<string name="launcher_all_apps">Todos seus aplicativos</string>
+	<string name="launcher_comm">Comunicação</string>
+	<string name="launcher_games">Jogos</string>
+
+	<string name="applauncher_all">Todos seus aplicativos</string>
+
+    <string name="xda">Dummy Launcher no XDA</string>
+    <string name="xda_summary">Give Feedback and report bugs at the official topic.</string>
+    <string name="github">Código aberto no GitHub</string>
+    <string name="github_summary">Você pode codificar algo novo ou traduzir o aplicativo.</string>
+    <string name="paypal">Doações via Paypal</string>
+    <string name="paypal_summary">Doações pelo PayPal não garantem atualizações ou melhorias, elas apenas suportam o trabalho do desenvolvedor. O aplicativo irá permanecer livre mesmo sem doações.</string>
+    <string name="settings_title">Configurações</string>
+    <string name="settings_defaults_title">Limpar padrão dos aplicativos</string>
+    <string name="settings_defaults_summary">Reinicia o botão HOME para levar de volta para o launcher antigo.</string>
+</resources>
